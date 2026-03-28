@@ -16,7 +16,6 @@ class LinkedInBadge extends StatelessWidget {
       (int viewId) {
         final div = web.HTMLDivElement();
         div.innerHTML = '''<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="VERTICAL" data-vanity="hibba-syed-7bba791b1" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/hibba-syed-7bba791b1">Hibba Syed</a></div>'''.toJS;
-        // = '''<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="VERTICAL" data-vanity="huzaifamughal076" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://pk.linkedin.com/in/huzaifamughal076?trk=profile-badge">Muhammad Huzaifa</a></div>'''.toJS;
 
         return div;
       },
