@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>Hibba Syed | Flutter Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Hibba Syed, Flutter Developer specializing in building scalable, modern mobile and web apps using Flutter and Dart.">
+  <meta name="keywords" content="Flutter Developer, Mobile Apps, Dart, UI/UX, Portfolio, Hibba Syed">
+  <meta name="author" content="Hibba Syed">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Hibba Syed | Flutter Developer Portfolio" />
+  <meta property="og:description" content="Portfolio of Hibba Syed showcasing Flutter projects, mobile apps, and development skills." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://my-portfolio-2ca93.web.app/" />
+  <meta property="og:image" content="favicon.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hibba Syed",
+    "jobTitle": "Flutter Developer",
+    "url": "http://my-portfolio-2ca93.web.app/",
+    "sameAs": [
+      "https://www.linkedin.com/in/hibba-syed-7bba791b1/",
+      "https://github.com/huzaifamughal076/"
+    ]
+  }
+  </script>
+
+  <!-- ====== LOADER STYLES ====== -->
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #020617;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    /* Fullscreen Loader */
+    #portfolio-loader {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(270deg, #020617, #0f172a, #020617);
+      background-size: 400% 400%;
+      animation: gradientMove 8s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Glass Card */
+    .loader-card {
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 18px;
+      padding: 42px 50px;
+      width: 340px;
+      text-align: center;
+      box-shadow: 0 25px 80px rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .brand {
+      color: #e5e7eb;
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: 0.6px;
+    }
+
+    .tagline {
+      color: #94a3b8;
+      margin: 10px 0 30px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    /* Progress Bar */
+    .progress-container {
+      height: 6px;
+      width: 100%;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #38bdf8, #6366f1);
+      animation: loading 2.4s ease-in-out infinite;
+    }
+
+    @keyframes loading {
+      0% { width: 0%; }
+      50% { width: 75%; }
+      100% { width: 100%; }
+    }
+
+    .loading-text {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #cbd5f5;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ====== PORTFOLIO LOADER ====== -->
+  <div id="portfolio-loader">
+    <div class="loader-card">
+      <h1 class="brand">Hibba Syed</h1>
+      <p class="tagline">Flutter Developer</p>
+
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+
+      <p class="loading-text">Loading Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Flutter App Root -->
+  <script src="flutter.js" defer></script>
+  <script src="main.dart.js" defer></script>
+
+  <!-- ====== REMOVE LOADER WHEN FLUTTER LOADS ====== -->
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      const loader = document.getElementById('portfolio-loader');
+      loader.style.opacity = '0';
+      loader.style.transition = 'opacity 0.6s ease';
+      setTimeout(() => {
+        loader.remove();
+        document.body.style.overflow = 'auto';
+      }, 600);
+    });
+  </script>
+
+</body>
+</html>
