@@ -14,22 +14,26 @@ class AnimatedDescriptionText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TweenAnimationBuilder(
+    return
+      TweenAnimationBuilder(
       tween: Tween(begin: start, end: end),
       duration: const Duration(milliseconds: 200),
       builder: (context, value, child) {
-        return Text(
-          'I design, develop, and deliver high-quality mobile applications,'
-          '${Responsive.isLargeMobile(context) ? '\n' : ' '}owning\nthe full lifecycle from '
-          'architecture and implementation to ${!Responsive.isLargeMobile(context) ? '\n' : ''}deployment and optimization.',
-          maxLines: 3,
-          overflow: TextOverflow.ellipsis,
-          style: TextStyle(
-            color: Colors.grey,
-            wordSpacing: 2,
-            fontSize: value,
+        return SizedBox(
+          child:  Text(
+            'I design, develop, and deliver high-quality mobile applications,'
+                '${Responsive.isLargeMobile(context) ? '\n' : ' '}owning\nthe full lifecycle from '
+                'architecture and implementation to ${!Responsive.isLargeMobile(context) ? '\n' : ''}deployment and optimization.',
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              color: Colors.grey,
+              wordSpacing: 2,
+              fontSize: value,
+            ),
           ),
         );
+
       },
     );
   }

@@ -53,8 +53,8 @@ class IntroBody extends StatelessWidget {
               const SizedBox(height: defaultPadding / 2),
               const Responsive(
                 desktop: AnimatedDescriptionText(start: 14, end: 15),
-                largeMobile: AnimatedDescriptionText(start: 14, end: 12),
-                mobile: AnimatedDescriptionText(start: 14, end: 12),
+                largeMobile: AnimatedDescriptionText(start: 14, end: 10),
+                mobile: AnimatedDescriptionText(start: 14, end: 10),
                 tablet: AnimatedDescriptionText(start: 17, end: 14),
               ),
               const SizedBox(
