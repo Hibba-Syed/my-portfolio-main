@@ -16,12 +16,12 @@ class Knowledges extends StatelessWidget {
           child: Text('Knowledge',style: TextStyle(color: Colors.white),),
         ),
         KnowledgeText(knowledge: 'Flutter, Dart'),
-        KnowledgeText(knowledge: 'Android Studio, Visual Studio'),
-        KnowledgeText(knowledge: 'Networking'),
-        KnowledgeText(knowledge: 'Git, Github,GitLab, Azure'),
-        KnowledgeText(knowledge: 'Firebase, Suprabase'),
+        KnowledgeText(knowledge: 'Android Studio'),
+        // KnowledgeText(knowledge: 'Networking'),
+        KnowledgeText(knowledge: 'Git, Github,Azure'),
+        KnowledgeText(knowledge: 'Firebase'),
         KnowledgeText(knowledge: 'Api Integration'),
-        KnowledgeText(knowledge: 'Jira, Trello, OpenProject'),
+        KnowledgeText(knowledge: 'Jira, OpenProject'),
       ],
     );
   }
