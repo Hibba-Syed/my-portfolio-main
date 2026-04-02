@@ -14,7 +14,7 @@ class AnimatedDescriptionText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
+    return  (!Responsive.isDesktop(context)) ?
       TweenAnimationBuilder(
       tween: Tween(begin: start, end: end),
       duration: const Duration(milliseconds: 200),
@@ -22,10 +22,9 @@ class AnimatedDescriptionText extends StatelessWidget {
         return SizedBox(
           child:  Text(
             'I design, develop, and deliver high-quality mobile applications,'
-                '${Responsive.isLargeMobile(context) ? '\n' : ' '}owning\nthe full lifecycle from '
-                'architecture and implementation to ${!Responsive.isLargeMobile(context) ? '\n' : ''}deployment and optimization.',
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
+                '${Responsive.isLargeMobile(context) ? '\n' : ' '}owningthe full lifecycle from '
+                'architecture and implementation \nto ${!Responsive.isLargeMobile(context) ? '\n' : ''}deployment and optimization.',
+            maxLines: 4,
             style: TextStyle(
               color: Colors.grey,
               wordSpacing: 2,
@@ -35,6 +34,26 @@ class AnimatedDescriptionText extends StatelessWidget {
         );
 
       },
-    );
+    ) :
+    TweenAnimationBuilder(
+      tween: Tween(begin: start, end: end),
+      duration: const Duration(milliseconds: 200),
+      builder: (context, value, child) {
+        return SizedBox(
+          child:  Text(
+            'I design, develop, and deliver high-quality mobile applications,'
+                '${Responsive.isLargeMobile(context) ? '\n' : ' '}owning\nthe full lifecycle from '
+                'architecture and implementation to ${!Responsive.isLargeMobile(context) ? '\n' : ''}deployment and optimization.',
+            maxLines: 4,
+            style: TextStyle(
+              color: Colors.grey,
+              wordSpacing: 2,
+              fontSize: value,
+            ),
+          ),
+        );
+
+      },
+    ) ;
   }
 }
