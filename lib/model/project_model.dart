@@ -55,9 +55,9 @@ List<Project> projectList = [
   //   platformToVisitText: "Check on Play store"
   // ),
   Project(
-    name: 'Property Concierge CRM', 
-    link: 'https://play.google.com/store/apps/details?id=com.alhad.crmapp&pcampaignid=web_share',
-    description: 'CRM Mobile application for Property Concierge to manage listings, leads, viewings, contacts', 
+    name: 'GPG GLOBAL CRM',
+    link: 'https://play.google.com/store/apps/details?id=com.app.gpgGlobalCrm',
+    description: 'CRM Mobile application for GPG global to manage listings, leads, viewings, contacts',
     platformToVisitSvg: AppConstants.playStoreIcon, 
     platformToVisitText: "Check on Play store"
   ),
@@ -68,27 +68,6 @@ List<Project> projectList = [
       platformToVisitSvg: AppConstants.playStoreIcon,
       platformToVisitText: "Check on Play store"
   ),
-  // Project(
-  //   name: 'SOAMS',
-  //   link: 'https://play.google.com/store/apps/details?id=com.soams.ownerPortal&pcampaignid=web_share',
-  //   description: "Welcome to the Sports City Community App, your all-in-one platform for seamless community living and property management. Powered by Sports City Owners Association Management Services, the app brings together essential services, communication, and transparency under one intuitive interface.",
-  //   platformToVisitSvg: AppConstants.playStoreIcon,
-  //   platformToVisitText: "Check on Play store"
-  // ),
-  // Project(
-  //   name: 'AROAM Community App',
-  //   link: 'https://play.google.com/store/apps/details?id=com.aroam.ownerPortal&pcampaignid=web_share',
-  //   description: "Welcome to the AROAM Community App — your complete solution for smarter property management and connected community living. Designed with simplicity and efficiency in mind, the AROAM Community App by AL RUSTUMANI OWNER ASSOCIATION MANAGEMENT SERVICES empowers homeowners and residents to access essential services, submit and track requests through the Happiness Centre, and stay informed with real-time community updates. For property owners, the app offers full transparency and control by providing instant access to account balances, detailed ledgers, service charge payments, and direct communication with the management team. With its sleek design and intuitive experience, the AROAM Community App redefines how you manage your property and engage with your community. Experience a more organized, transparent, and connected lifestyle — all in one powerful app.",
-  //   platformToVisitSvg: AppConstants.playStoreIcon,
-  //   platformToVisitText: "Check on Play store"
-  // ),
-  // Project(
-  //   name: 'LREMC COMMUNITY',
-  //   link: 'https://play.google.com/store/apps/details?id=com.lusail.qatarOwner&pcampaignid=web_share',
-  //   description: "The LREMC Community App serves as an all-encompassing digital platform, offering residents and property owners a centralized hub for effectively managing their properties and community life. It simplifies tasks such as move-in approvals, work permits, facility bookings, and support services, streamlining daily operations into a cohesive experience.",
-  //   platformToVisitSvg: AppConstants.playStoreIcon,
-  //   platformToVisitText: "Check on Play store"
-  // ),
   Project(
     name: 'ISKAAN INSPECTIONS', 
     link: 'https://play.google.com/store/apps/details?id=com.iskaan.inspections&pcampaignid=web_share',
@@ -103,16 +82,15 @@ List<Project> projectList = [
   //   platformToVisitSvg: AppConstants.playStoreIcon,
   //   platformToVisitText: "Check on Play store"
   // ),
-  // Project(
-  //   name: 'HAYAK MOBILE APP',
-  //   description: "Welcome to HAYAK MOBILE APP, This application is an event management application which hepls it user to check for latest upcoming events and book their event ticket from there and easily can enter the event just by showing the generated pass",
-  //   platformToVisitSvg: AppConstants.githubIcon,
-  //   platformToVisitText: "Check on Github"
-  // ),
-
   Project(
     name: 'Vital Ease',
     description: "Vital Ease is a comprehensive business management app built for the Vital brand to streamline and simplify vendor operations. Designed to support seamless coordination between Vital and its network of vendors, Vital Ease enables users to manage vendor profiles, track ongoing orders, and monitor payment statuses — including pending amounts from past orders. With real‑time visibility into order progress, history, and financial records, the app empowers both company staff and vendors to stay organized, make informed decisions, and maintain efficient business relationships. Whether reviewing order details, updating delivery status, or reconciling outstanding balances, Vital Ease brings transparency, accuracy, and ease to everyday vendor management.",
+    platformToVisitSvg: AppConstants.githubIcon,
+    platformToVisitText: "Check on Github"
+  ),
+  Project(
+    name: 'A Travel App',
+    description: "A traveling app in which we create complex UI provider for state management. Localization is used to add support for other languages.Integrated Firebase for authentication and data storage etc. ",
     platformToVisitSvg: AppConstants.githubIcon,
     platformToVisitText: "Check on Github"
   ),

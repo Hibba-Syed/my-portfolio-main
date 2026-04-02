@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../view model/responsive.dart';
-
 class AnimatedDescriptionText extends StatelessWidget {
   const AnimatedDescriptionText({
     super.key,
@@ -11,49 +10,37 @@ class AnimatedDescriptionText extends StatelessWidget {
 
   final double start;
   final double end;
-
   @override
   Widget build(BuildContext context) {
-    return  (!Responsive.isDesktop(context)) ?
-      TweenAnimationBuilder(
+    final bool isDesktop = Responsive.isDesktop(context);
+    final bool isLargeMobile = Responsive.isLargeMobile(context);
+    final bool isTablet = Responsive.isTablet(context); // ✅ ADD THIS
+
+    return TweenAnimationBuilder(
       tween: Tween(begin: start, end: end),
       duration: const Duration(milliseconds: 200),
       builder: (context, value, child) {
-        return SizedBox(
-          child:  Text(
-            'I design, develop, and deliver high-quality mobile applications,'
-                '${Responsive.isLargeMobile(context) ? '\n' : ' '}owningthe full lifecycle from '
-                'architecture and implementation \nto ${!Responsive.isLargeMobile(context) ? '\n' : ''}deployment and optimization.',
-            maxLines: 4,
-            style: TextStyle(
-              color: Colors.grey,
-              wordSpacing: 2,
-              fontSize: value,
-            ),
+        return Text(
+          isDesktop
+              ? 'I design, develop, and deliver high-quality mobile applications, '
+              'owning\nthe full lifecycle from architecture and implementation '
+              'to \ndeployment and optimization.'
+              : isTablet
+              ? 'I design, develop, and deliver high-quality mobile applications, '
+              'owning the\nfull lifecycle from architecture and implementation '
+              'to deployment and\noptimization.'
+              : 'I design, develop, and deliver high-quality mobile applications, '
+              '${isLargeMobile ? '\n' : ' '}owning the full lifecycle from '
+              'architecture and implementation \nto deployment and optimization.',
+          softWrap: true,
+          overflow: TextOverflow.visible,
+          style: TextStyle(
+            color: Colors.grey,
+            wordSpacing: 2,
+            fontSize: value,
           ),
         );
-
       },
-    ) :
-    TweenAnimationBuilder(
-      tween: Tween(begin: start, end: end),
-      duration: const Duration(milliseconds: 200),
-      builder: (context, value, child) {
-        return SizedBox(
-          child:  Text(
-            'I design, develop, and deliver high-quality mobile applications,'
-                '${Responsive.isLargeMobile(context) ? '\n' : ' '}owning\nthe full lifecycle from '
-                'architecture and implementation to ${!Responsive.isLargeMobile(context) ? '\n' : ''}deployment and optimization.',
-            maxLines: 4,
-            style: TextStyle(
-              color: Colors.grey,
-              wordSpacing: 2,
-              fontSize: value,
-            ),
-          ),
-        );
-
-      },
-    ) ;
+    );
   }
 }

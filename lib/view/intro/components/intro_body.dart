@@ -14,12 +14,11 @@ class IntroBody extends StatelessWidget {
     var size = MediaQuery.sizeOf(context);
     return Row(
       children: [
-        // Expanded(
-        //   child:
     SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 if (!Responsive.isDesktop(context))
                   SizedBox(
@@ -54,7 +53,7 @@ class IntroBody extends StatelessWidget {
                 const CombineSubtitleText(),
                 const SizedBox(height: defaultPadding / 2),
                 const Responsive(
-                  desktop: AnimatedDescriptionText(start: 14, end: 15),
+                  desktop: AnimatedDescriptionText(start: 14, end: 16),
                   largeMobile: AnimatedDescriptionText(start: 14, end: 12),
                   mobile: AnimatedDescriptionText(start: 14, end: 12),
                   tablet: AnimatedDescriptionText(start: 17, end: 14),
@@ -66,10 +65,9 @@ class IntroBody extends StatelessWidget {
               ],
             ),
           ),
-        // ),
-        const Spacer(),
+        if (Responsive.isDesktop(context)) const Spacer(),
         if (Responsive.isDesktop(context)) const AnimatedImageContainer(),
-        const Spacer()
+        if (Responsive.isDesktop(context)) const Spacer(),
       ],
     );
   }
