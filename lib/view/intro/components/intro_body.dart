@@ -17,8 +17,7 @@ class IntroBody extends StatelessWidget {
     SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              // mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
+               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (!Responsive.isDesktop(context))
                   SizedBox(
@@ -54,8 +53,8 @@ class IntroBody extends StatelessWidget {
                 const SizedBox(height: defaultPadding / 2),
                 const Responsive(
                   desktop: AnimatedDescriptionText(start: 14, end: 16),
-                  largeMobile: AnimatedDescriptionText(start: 14, end: 12),
-                  mobile: AnimatedDescriptionText(start: 14, end: 12),
+                  largeMobile: AnimatedDescriptionText(start: 14, end: 11),
+                  mobile: AnimatedDescriptionText(start: 14, end: 11),
                   tablet: AnimatedDescriptionText(start: 17, end: 14),
                 ),
                 const SizedBox(

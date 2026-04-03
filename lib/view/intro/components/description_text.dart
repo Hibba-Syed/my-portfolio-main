@@ -33,11 +33,12 @@ class AnimatedDescriptionText extends StatelessWidget {
           // 'I design, develop, and deliver high-quality mobile applications, '
           //     '${isLargeMobile ? '\n' : ' '}owning the full lifecycle from '
           //     'architecture and implementation \nto deployment and optimization.',
-          'I design, develop, and deliver high-quality mobile applications, '
-              'owning the full lifecycle from architecture and implementation '
+          'I design, develop, and deliver high-quality mobile \napplications, '
+              'owning the full lifecycle from architecture and implementation\n'
               'to deployment and optimization.',
           softWrap: true,
           overflow: TextOverflow.visible,
+          maxLines: 3,
           style: TextStyle(
             color: Colors.grey,
             wordSpacing: 2,
