@@ -14,7 +14,7 @@ class AnimatedDescriptionText extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool isDesktop = Responsive.isDesktop(context);
     final bool isLargeMobile = Responsive.isLargeMobile(context);
-    final bool isTablet = Responsive.isTablet(context); // ✅ ADD THIS
+    final bool isTablet = Responsive.isTablet(context);
 
     return TweenAnimationBuilder(
       tween: Tween(begin: start, end: end),
@@ -29,9 +29,13 @@ class AnimatedDescriptionText extends StatelessWidget {
               ? 'I design, develop, and deliver high-quality mobile applications, '
               'owning the\nfull lifecycle from architecture and implementation '
               'to deployment and\noptimization.'
-              : 'I design, develop, and deliver high-quality mobile applications, '
-              '${isLargeMobile ? '\n' : ' '}owning the full lifecycle from '
-              'architecture and implementation \nto deployment and optimization.',
+              :
+          // 'I design, develop, and deliver high-quality mobile applications, '
+          //     '${isLargeMobile ? '\n' : ' '}owning the full lifecycle from '
+          //     'architecture and implementation \nto deployment and optimization.',
+          'I design, develop, and deliver high-quality mobile applications, '
+              'owning the full lifecycle from architecture and implementation '
+              'to deployment and optimization.',
           softWrap: true,
           overflow: TextOverflow.visible,
           style: TextStyle(
