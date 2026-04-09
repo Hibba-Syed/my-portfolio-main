@@ -15,6 +15,7 @@ class AnimatedDescriptionText extends StatelessWidget {
     final bool isDesktop = Responsive.isDesktop(context);
     final bool isLargeMobile = Responsive.isLargeMobile(context);
     final bool isTablet = Responsive.isTablet(context);
+    final bool isMobile = Responsive.isMobile(context);
 
     return TweenAnimationBuilder(
       tween: Tween(begin: start, end: end),
@@ -23,22 +24,23 @@ class AnimatedDescriptionText extends StatelessWidget {
         return Text(
           isDesktop
               ? 'I design, develop, and deliver high-quality mobile applications, '
-              'owning\nthe full lifecycle from architecture and implementation '
-              'to \ndeployment and optimization.'
+              '\nowning the full lifecycle from architecture and implementation '
+              '\nto deployment and optimization.'
               : isTablet
               ? 'I design, develop, and deliver high-quality mobile applications, '
-              'owning the\nfull lifecycle from architecture and implementation '
-              'to deployment and\noptimization.'
+              '\nowning the full lifecycle from architecture and \nimplementation '
+              'to deployment and optimization.'
               :
-          // 'I design, develop, and deliver high-quality mobile applications, '
-          //     '${isLargeMobile ? '\n' : ' '}owning the full lifecycle from '
-          //     'architecture and implementation \nto deployment and optimization.',
-          'I design, develop, and deliver high-quality mobile \napplications, '
-              'owning the full lifecycle from architecture and implementation\n'
+          //second
+          // 'I design, develop, and deliver high-quality mobile\napplications, '
+          //     '${(isLargeMobile || isMobile) ? '\n' : ' '}\nowning the full lifecycle from '
+          //     'architecture and \nimplementation to deployment and optimization.',
+          'I design, develop, and deliver high-quality mobile applications, '
+              'owning the full lifecycle from architecture and implementation '
               'to deployment and optimization.',
-          softWrap: true,
+          // softWrap: true,
           overflow: TextOverflow.visible,
-          maxLines: 3,
+          // maxLines: 4,
           style: TextStyle(
             color: Colors.grey,
             wordSpacing: 2,

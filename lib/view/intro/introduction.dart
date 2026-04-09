@@ -14,12 +14,13 @@ class Introduction extends StatelessWidget {
             width: MediaQuery.sizeOf(context).width * 0.01,
           ),
           if (!Responsive.isLargeMobile(context))  MenuButton(onTap: () => Scaffold.of(context).openDrawer(),),
+          /// i change the padding here
           SizedBox(
-            width: MediaQuery.sizeOf(context).width * 0.02,
+            width: MediaQuery.sizeOf(context).width * 0.0,
           ),
-          if (!Responsive.isLargeMobile(context)) const SocialMediaIconList(),
+          if ((!Responsive.isLargeMobile(context)) || (!Responsive.isMobile(context))) const SocialMediaIconList(),
           SizedBox(
-            width: MediaQuery.sizeOf(context).width * 0.07,
+            width: MediaQuery.sizeOf(context).width * 0.04,
           ),
           const Expanded(
             child: IntroBody(),
