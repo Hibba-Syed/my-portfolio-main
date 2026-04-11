@@ -1,7 +1,7 @@
 class AppConstants {
 
   static const linkdinUrl = "https://www.linkedin.com/in/hibba-syed-7bba791b1";
-  static const whatsAppPhoneNumber = "03349848124";
+  static const whatsAppPhoneNumber = "03250110097";
   static const email = "hibbasyed0@gmail.com";
  static const resumeUrl = "https://drive.google.com/file/d/1An9BJ2FVAW7FW5YA63G-WBERsQ9C1xF6/preview";
   static const githubUrl = "https://github.com/Hibba-Syed";
